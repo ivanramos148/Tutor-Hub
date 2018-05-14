@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Beers } from './models/beers';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  currentBeers: Beers[] = [
+    new Beers('newWorld')
+  ];
+  submitForm(newWorld: Beers){
+    this.currentBeers.unshift(new Beers(newWorld))
+    console.log(newWorld)
+  }
 }
