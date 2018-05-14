@@ -1,16 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-
-
-  <div *ngFor="let currentTask of currentBeers">
-    <button (click)="deleteTask(currentTask)">Delete</button>
-    <h1>{{currentTask.title}}</h1>
-    <img src="{{currentTask.photo}}" alt="{{currentTask.title}}" width="200" height="250">
-    <p>{{currentTask.description}}</p>
+<div class="jumbotron">
+  <span style="text-align:center"><h1 class="headerOne">PhotoFeed</h1></span>
+</div>
+<div class="container">
+  <div style="text-align:center">
+    <div class="inputs">
+      <input required class="form-control" #newTitle placeholder="Add Title"><br><br>
+      <input required class="form-control" #newPhoto placeholder="Add Photo"><br><br>
+      <input required class="form-control" #newDescription placeholder="Add description"><br><br>
+    </div>
+  <button class="btn btn-default" (click)="submitForm(newTitle.value, newPhoto.value, newDescription.value); newTitle.value=''; newPhoto.value=''; newDescription.value='';">submit</button><br><br>
+    <div *ngFor="let currentTask of currentBeers">
+      <button class="btn btn-danger" (click)="deleteTask(currentTask)"><i style="font-size:15px" class="fa">&#xf014;</i> Trash</button>
+      <h1>{{currentTask.title}}</h1>
+      <img src="{{currentTask.photo}}" alt="{{currentTask.title}}" width="180" height="320">
+      <p>{{currentTask.description}}</p>
+    </div>
   </div>
-
-<input #newTitle placeholder="Add Title"><br><br>
-<input #newPhoto placeholder="Add Photo"><br><br>
-<input #newDescription placeholder="Add description  "><br><br>
-  <button class="btn btn-default" (click)="submitForm(newTitle.value, newPhoto.value, newDescription.value); newTitle.value=''; newPhoto.value=''; newDescription.value='';">submit</button>
 </div>

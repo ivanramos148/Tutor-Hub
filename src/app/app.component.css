@@ -1,0 +1,19 @@
+#hover{
+  cursor: pointer;
+}
+.inputs{
+  width: 500px;
+  margin-left: 310px
+}
+.jumbotron{
+  background: #7be5a7;
+  color: white
+}
+.headerOne{
+  margin-top: 10px;
+  font-size: 500%;
+  font-family: 'Secular One', sans-serif;
+}
+*{
+  font-family: 'Secular One', sans-serif;
+}
