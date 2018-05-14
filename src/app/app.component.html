@@ -3,8 +3,14 @@
 
 
   <div *ngFor="let currentTask of currentBeers">
+    <button (click)="deleteTask(currentTask)">Delete</button>
     <h1>{{currentTask.title}}</h1>
+    <img src="{{currentTask.photo}}" alt="{{currentTask.title}}" width="200" height="250">
+    <p>{{currentTask.description}}</p>
   </div>
-  <input #newTitle>
-  <button class="btn btn-default" (click)="submitForm(newTitle.value); newTitle.value='';">submit</button>
+
+<input #newTitle placeholder="Add Title"><br><br>
+<input #newPhoto placeholder="Add Photo"><br><br>
+<input #newDescription placeholder="Add description  "><br><br>
+  <button class="btn btn-default" (click)="submitForm(newTitle.value, newPhoto.value, newDescription.value); newTitle.value=''; newPhoto.value=''; newDescription.value='';">submit</button>
 </div>
