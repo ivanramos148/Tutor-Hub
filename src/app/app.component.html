@@ -1,32 +1,59 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<html lang="en" dir="ltr">
+<html>
   <body>
     <div class="wrapper">
-    <div class="jumbotron">
-      <span style="text-align:center"><h1 class="headerOne">Photo-Hub</h1></span>
+    <div class="header">
+      <span><h1 class="headerOne">Tutor-Hub</h1></span>
     </div>
+    <div id="navbar">
+      <a>Home</a>
+      <a>News</a>
+      <a>Contact</a>
+      <a>About</a>
+    </div><br><br>
     <div class="container">
         <div style="text-align:center">
+          <!-- Simple inputs -->
           <div class="inputs">
             <label for="">Job Title:</label>
             <input required class="form-control" #newTitle placeholder="Add Title"><br>
             <label for="">Photo of you:</label>
             <input required class="form-control" #newPhoto placeholder="Add Photo"><br>
-            <label for="">Work Description:</label>
-            <input required class="form-control" #newDescription placeholder="Add description"><br>
+            <label for="">Tutor in:</label>
+            <select required class="form-control" #newDescription><br>
+              <option>Science</option>
+              <option>Math</option>
+              <option>Computer Science</option>
+              <option>Social Studies</option>
+              <option>English</option>
+            </select><br>
           </div>
-        <button id="buttonEnter"class="btn btn-default" (click)="submitForm(newTitle.value, newPhoto.value, newDescription.value); newTitle.value=''; newPhoto.value=''; newDescription.value='';">submit</button><br><br>
+        <button id="buttonEnter" class="btn btn-default" (click)="submitForm(newTitle.value, newPhoto.value, newDescription.value); newTitle.value=''; newPhoto.value='';">submit</button><br><br>
+          <!-- end of Inputs -->
+          <!-- Edit post -->
+            <div class="inputs" *ngIf="changeAbout">
+              <br>
+              <label>Edit</label>
+              <input [(ngModel)]="changeAbout.title" class="form-control"><br>
+              <input [(ngModel)]="changeAbout.photo" class="form-control"><br>
+              <input [(ngModel)]="changeAbout.description" class="form-control"><br>
+              <button class="btn btn-default" style="background-color:#6ddfff; color: white;" (click)="doneEdit()">Done</button>
+              <br>
+            </div>
+          <!-- end of edit post -->
+          <!-- Display Posts -->
           <div *ngFor="let currentTask of currentFeed">
             <div class="thumbnail">
-              <img src="{{currentTask.photo}}" alt="{{currentTask.title}}" style="width:100%; height:73%; border-radius: 5px;">
+              <img id="hoverImg" src="{{currentTask.photo}}" alt="{{currentTask.title}}" (click)="editProfile(currentTask)" style="width:100%; height:73%; border-radius: 5px;">
               <h4 class="bigs" style="margin-top:5px;">{{currentTask.title}}</h4>
-              <p class="small" style="margin-bottom:5px;">{{currentTask.description}}</p>
+              <p class="small" style="margin-bottom:5px;">{{currentTask.description}} tutor</p>
               <button id="button" class="btn btn-danger" (click)="deleteTask(currentTask)"><p id="deleteTask">Delete</p></button>
             </div><br>
           </div>
+          <!-- end of display Posts -->
         </div>
       </div>
     </div>
-    <footer style="text-align:center">Copyright © 2018, Photo-Hub Ivan Ramos-Hernandez</footer>
+    <footer style="text-align:center">Tutor-Hub Copyright © 2018, Ivan Ramos-Hernandez</footer>
   </body>
 </html>
