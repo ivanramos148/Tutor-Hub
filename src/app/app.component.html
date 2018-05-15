@@ -5,18 +5,27 @@
     <div class="header">
       <span><h1 class="headerOne">Tutor-Hub</h1></span>
     </div>
+    <!-- Navbar -->
     <div id="navbar">
       <a>Home</a>
+      <a>Profile</a>
       <a>News</a>
       <a>Contact</a>
       <a>About</a>
+      <div class="search-container">
+        <div class="transparent">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
     </div><br><br>
+    <!-- end of Navbar -->
     <div class="container">
         <div style="text-align:center">
           <!-- Simple inputs -->
           <div class="inputs">
-            <label for="">Job Title:</label>
-            <input required class="form-control" #newTitle placeholder="Add Title"><br>
+            <label for="">Full Name:</label>
+            <input required class="form-control" #newTitle placeholder="Name"><br>
             <label for="">Photo of you:</label>
             <input required class="form-control" #newPhoto placeholder="Add Photo"><br>
             <label for="">Tutor in:</label>
@@ -37,7 +46,7 @@
               <input [(ngModel)]="changeAbout.title" class="form-control"><br>
               <input [(ngModel)]="changeAbout.photo" class="form-control"><br>
               <input [(ngModel)]="changeAbout.description" class="form-control"><br>
-              <button class="btn btn-default" style="background-color:#6ddfff; color: white;" (click)="doneEdit()">Done</button>
+              <button class="btn btn-default" style="background-color:#7be5a7; color: white;" (click)="doneEdit()">Done</button>
               <br>
             </div>
           <!-- end of edit post -->

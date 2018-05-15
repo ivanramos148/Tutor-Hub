@@ -12,10 +12,35 @@ body {
 
 #navbar {
   overflow: hidden;
-  background-color: #77d19c;
+  background-color: #6fce96;
+}
+#navbar input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 12px;
+  border: none;
+  font-size: 17px;
+}
+#navbar .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.transparent{
+  opacity: .7;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
-#navbar a {
+
+#navbar .search-container button:hover {
+  background: #ccc;
+}
+#navbar a{
   float: left;
   display: block;
   color: white;
@@ -26,17 +51,14 @@ body {
 }
 
 #navbar a:hover {
-  background-color: #baffd7;
+  background-color: #a5ffca;
   color: black;
 }
-
-#navbar a.active {
-  background-color: #333;
-  color: white;
-}
-
 .content {
   padding: 16px;
+}
+a{
+  cursor: pointer;
 }
 
 .sticky {
