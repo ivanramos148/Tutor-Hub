@@ -1,6 +1,12 @@
 #hover{
   cursor: pointer;
 }
+#deleteTask{
+  font-size: 50%;
+}
+body{
+  background: white
+}
 .inputs{
   width: 500px;
   margin-left: 310px
@@ -9,11 +15,60 @@
   background: #7be5a7;
   color: white
 }
+#copyright{
+ line-height: 100px
+}
+.wraper{
+  min-height: calc(1903vh - 100px);
+}
 .headerOne{
   margin-top: 10px;
   font-size: 500%;
   font-family: 'Secular One', sans-serif;
 }
-*{
+h1, h2, h3, h4, label{
   font-family: 'Secular One', sans-serif;
+}
+.thumbnail{
+  width: 250px;
+  height: 350px;
+  margin-top: 40px;
+  margin-left: 420px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-style: solid black;
+  border-width: 5px;
+  /* width: 250px;
+  height: 300px; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#button{
+  background-color: #e56464;
+  height: 22px;
+  margin-top: 24px;
+  width: 250px;
+}
+#buttonEnter{
+  background-color: #7be5a7;
+  color: white;
+  height: 40px;
+}
+img {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  /* cursor: pointer; */
+}
+#move{
+  margin-left: 400px;
+}
+footer{
+  background-color: #d3e5dc;
+}
+h4.big{
+  line-height: 20%
+}
+p.small{
+  line-height: 25%
 }
