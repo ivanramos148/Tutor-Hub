@@ -8,7 +8,9 @@ import { NewsFeed } from './models/beers';
 })
 export class AppComponent {
   title = 'app';
+  hideAbout = null
   changeAbout = null;
+  aboutMe = []
   currentFeed: NewsFeed[] = [
     new NewsFeed(`Olan Rodger`, `https://previews.123rf.com/images/vadymvdrobot/vadymvdrobot1509/vadymvdrobot150900446/45025475-closeup-portrait-of-a-handsome-man-at-gym.jpg`, `Computer Science`),
     new NewsFeed(`Emily Anderson`, `http://www.slate.com/content/dam/slate/blogs/xx_factor/2014/susan.jpg.CROP.promo-mediumlarge.jpg`, `math`),
@@ -29,5 +31,11 @@ export class AppComponent {
   }
   doneEdit() {
     this.changeAbout = null;
+  }
+  aboutSection(){
+    this.hideAbout = this.aboutMe;
+  }
+  hideSection() {
+    this.hideAbout = null;
   }
 }

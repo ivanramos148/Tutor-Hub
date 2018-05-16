@@ -76,7 +76,7 @@ a{
 }
 .inputs{
   width: 500px;
-  margin-left: 310px
+  margin-left: 300px;
 }
 .header{
   padding: 30px;
@@ -102,14 +102,13 @@ h1, h2, h3, h4, label{
   width: 250px;
   height: 350px;
   margin-top: 40px;
-  margin-left: 420px;
+  margin-left: 400px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   border-style: solid black;
   border-width: 5px;
-  /* width: 250px;
-  height: 300px; */
+  border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #button{
@@ -122,6 +121,7 @@ h1, h2, h3, h4, label{
   background-color: #7be5a7;
   color: white;
   height: 40px;
+  margin-right: 100px
 }
 img {
   image-rendering: auto;
@@ -132,6 +132,7 @@ img {
 #move{
   margin-left: 400px;
 }
+
 footer{
   background-color: #7be5a7;
   color: white
@@ -141,4 +142,29 @@ h4.big{
 }
 p.small{
   line-height: 25%
+}
+.headerWell{
+  color: white;
+  background-color: #6fce96;
+  border-radius: 3px;
+}
+.well{
+ background-color: #edfcf3;
+ width: 250px;
+ height: 720px;
+ margin-left: 215px;
+ margin-top: 30px;
+ float:left;
+ border-radius: 15px
+}
+#secondFooter{
+  margin-top: 700px;
+  border-radius: 15px;
+  border-radius: 3px;
+}
+.bottomWell{
+  background-color: #edfcf3;
+  border-radius: 3px;
+  height: 100px;
+  border-radius: 15px
 }

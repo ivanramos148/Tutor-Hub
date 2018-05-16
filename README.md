@@ -1,6 +1,10 @@
-# BeerStore
+# Tutor-hub
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+## Made by Ivan Ramos
+
+### Description
+ * A site in which tutors can put themselves out in the world
+ * Earn money to teach students your valuable skills
 
 ## Development server
 
